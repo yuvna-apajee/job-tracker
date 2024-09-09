@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job Application</title>
+</head>
+<body>
+    <h1>Edit Job Application</h1>
+
+    <form action="{{ url_for('edit_job', job_id=application.id) }}" method="POST">
+        <label for

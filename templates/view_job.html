@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+</head>
+<body>
+    <h1>Job Details</h1>
+
+    <p><strong>Job Link:</strong> <a href="{{ application.job_link }}" target="_blank">{{ application.job_link }}</a></p>
+    <p><strong>Job Description:</strong></p>
+    <p>{{ application.job_description }}</p>
+    <p><strong>Resume:</strong> <a href="/uploads/{{ application.resume }}" target="_blank">View Resume</a></p>
+    <p><strong>Cover Letter:</strong> <a href="/uploads/{{ application.cover_letter }}" target="_blank">View Cover Letter</a></p>
+    <p><strong>Date Applied:</strong> {{ application.date_applied }}</p>
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

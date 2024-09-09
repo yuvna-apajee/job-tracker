@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+</head>
+<body>
+    <h1>Job Application Tracker</h1>
+
+    <!-- Add a link to the Dashboard here -->
+    <a href="{{ url_for('dashboard') }}" style="padding: 10px; background-color: blue; color: white; text-decoration: none; border-radius: 5px;">Go to Dashboard</a><br><br>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="job_link">Job Link:</label>
+        <input type="url" id="job_link" name="job_link" required><br><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" required></textarea><br><br>
+
+        <label for="resume">Resume Sent:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+        <label for="cover_letter">Cover Letter Sent:</label>
+        <input type="file" id="cover_letter" name="cover_letter" accept=".pdf,.doc,.docx" required><br><br>
+
+        <label for="date_applied">Date Applied:</label>
+        <input type="date" id="date_applied" name="date_applied" required><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Applied">Applied</option>
+            <option value="Interview Scheduled">Interview Scheduled</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Offer Received">Offer Received</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

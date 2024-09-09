@@ -1,0 +1,18 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Ignore SQLite database files
+*.db
+database.db
+job_applications.db
+
+# Ignore uploads folder (assuming it contains sensitive files)
+uploads/
+
+# Ignore migration cache files
+migrations/__pycache__/
